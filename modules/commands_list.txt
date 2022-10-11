@@ -1,0 +1,12 @@
+Print or say:
+- any math expressions
+- any definition/term
+- weather in [city]
+- exchange rate
+- "search [something-to-search]" to open google
+- "youtube [something-to-search]" to open youtube
+- "translate [something to translate]" to open translator
+- other questions I'll try to answer. 
+If I don't know the answer to your question, please ask in format "search [your question]" and I'll open google :)
+
+- "bye", "finish" or "exit" or press Ctrl + C to exit 
