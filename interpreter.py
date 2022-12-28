@@ -30,9 +30,12 @@ def interpreter(command):
         content = "".join(f.readlines())
       print(content)  
     else:
-      print(wolfram_alpha(command))
+      answer = wolfram_alpha(command)
+      print(answer)
+      return answer
   except ValueError:
     print(messages["UNKNOWN_COMMAND"])
+
 
 def wolfram_alpha(command):
   try:
@@ -47,11 +50,13 @@ def wolfram_alpha(command):
   except:
     return errors["UNKNOWN_QUESTION"](command)
 
-while True:
-  try:
-    user_input = input(messages["INPUT"]).strip().lower()
-    if not user_input:
-      continue
-    interpreter(user_input)    
-  except KeyboardInterrupt:
-    sys.exit(messages["GOODBYE"])  
+
+def get_input():
+  while True:
+    try:
+      user_input = input(messages["INPUT"]).strip().lower()
+      if not user_input:
+        continue
+      interpreter(user_input)    
+    except KeyboardInterrupt:
+      sys.exit(messages["GOODBYE"])  
